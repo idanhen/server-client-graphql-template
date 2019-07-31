@@ -1,11 +1,12 @@
 {
   "name": "server",
+  "private": true,
   "version": "0.0.0",
-  "description": "> TODO: description",
+  "description": "product app - node / TS / apollo / lerna / nodemon",
   "author": "IdnaHen <idandush@gmail.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/server.js",
+  "main": "build/server.js",
   "directories": {
     "lib": "lib"
   },
@@ -13,10 +14,29 @@
     "lib"
   ],
   "scripts": {
+    "build:once": "webpack --config conf/webpack.$NODE_ENV.js",
+    "build:dev": "webpack --config conf/webpack.$NODE_ENV.js --watch",
+    "start": "cross-env NODE_ENV=development npm-run-all --parallel start:server build:dev",
+    "start:server": "node-dev build/server",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "keywords": [],
   "devDependencies": {
-    "typescript": "^3.5.3"
+    "@types/express": "^4.17.0",
+    "@types/webpack-env": "^1.14.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^5.2.0",
+    "gulp": "^4.0.2",
+    "npm-run-all": "^4.1.5",
+    "ts-loader": "^6.0.4",
+    "typescript": "^3.5.3",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6",
+    "webpack-merge": "^4.2.1",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-dev": "^4.0.0"
   }
 }
