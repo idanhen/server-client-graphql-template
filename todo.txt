@@ -1,0 +1,9 @@
+1. server with express
+2. apollo server ( ts )
+3. postgress
+4. node ORM for postgress
+5. create login
+6. client - styled components
+7. client - add bootstrap
+8. client - create login page / first view page
+9. client - create first route - displaying all products.
