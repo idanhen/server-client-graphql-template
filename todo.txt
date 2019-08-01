@@ -1,5 +1,7 @@
 1. server with express
 2. apollo server ( ts )
+  - use const { GraphQLSchema, GraphQLObjectType } = require("graphql");
+  - https://graphql.org/graphql-js/type/#graphqlschema
 3. postgress
 4. node ORM for postgress
 5. create login
