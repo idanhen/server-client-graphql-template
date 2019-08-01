@@ -1,6 +1,12 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "tsc -b packages/client packages/server",
+    "test": "lerna run test",
+    "start": "lerna run start"
+  },
   "devDependencies": {
     "lerna": "^3.16.4"
   }
